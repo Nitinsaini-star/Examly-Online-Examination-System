@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examly | Online Examination System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Examly home"><span class="brand-mark">e</span><span>examly</span></a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a class="nav-link active" href="#top">Overview</a>
+      <a class="nav-link" href="#exams">Exams</a>
+      <a class="nav-link" href="#about">How it works</a>
+    </nav>
+    <div class="header-actions"><button class="icon-button" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button><button class="login-button" id="openAuth">Sign in <span>↗</span></button><button class="profile-button" id="profileButton" hidden><span class="avatar" id="profileAvatar">AR</span><span class="profile-name" id="profileName">Alex Rivera</span><span class="chevron">⌄</span></button></div>
+  </header>
+
+  <main id="top">
+    <section class="hero-section page-shell">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Your learning command center</p>
+        <h1>Make every<br /><em>answer</em> count.</h1>
+        <p class="hero-description">A calmer, smarter way to prepare for what’s next. Pick a challenge, find your flow, and see exactly how far you’ve come.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#exams">Explore exams <span>↗</span></a><a class="text-button" href="#about">See how it works <span>→</span></a></div>
+        <div class="trust-row"><div class="avatar-stack"><span>JP</span><span>MS</span><span>KN</span><span>+</span></div><span>Join <strong>12,400+</strong> learners leveling up</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Learning progress snapshot">
+        <div class="scene-stage" id="sceneStage" aria-hidden="true"><div class="scene-glow"></div><div class="scene-core"><span class="core-letter">e</span><span class="core-label">FOCUS</span></div><div class="scene-ring ring-a"></div><div class="scene-ring ring-b"></div><div class="scene-orbit-dot dot-green"></div><div class="scene-orbit-dot dot-coral"></div><span class="scene-caption">adaptive learning system</span></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="floating-note note-top"><span class="note-icon mint">↗</span><span><strong>82%</strong><small>average score</small></span></div>
+        <div class="score-card"><div class="score-head"><span>Weekly progress</span><span class="tiny-menu">···</span></div><div class="chart"><div class="chart-line"></div><div class="chart-dot dot-a"></div><div class="chart-dot dot-b"></div><div class="chart-dot dot-c"></div><div class="chart-dot dot-d"></div><div class="chart-labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div></div><div class="score-footer"><span><b>+18%</b> this week</span><span class="progress-mini"><i></i></span></div></div>
+        <div class="floating-note note-bottom"><span class="note-icon yellow">✦</span><span><strong>3 day streak</strong><small>keep going, Alex</small></span></div>
+      </div>
+    </section>
+
+    <section class="stats-strip page-shell"><div><strong>28k</strong><span>questions answered</span></div><div><strong>96%</strong><span>learner satisfaction</span></div><div><strong>120+</strong><span>expert-built exams</span></div><div class="strip-note"><span class="spark">✳</span><span>Designed for progress,<br />not pressure.</span></div></section>
+
+    <section class="exam-section page-shell" id="exams"><div class="section-heading"><div><p class="eyebrow">Curated for you</p><h2>Choose your next<br /><em>challenge.</em></h2></div><a class="text-button" href="#exams">View all exams <span>→</span></a></div><div class="filter-row"><button class="filter active" data-filter="all">All exams <span id="examCount">12</span></button><button class="filter" data-filter="popular">Popular</button><button class="filter" data-filter="new">New this week</button><div class="filter-divider"></div><span class="sort-label">Sort by</span><button class="sort-button">Recommended <span>⌄</span></button></div><div class="exam-grid" id="examGrid"></div></section>
+
+    <section class="how-section page-shell" id="about"><div class="how-intro"><p class="eyebrow">The Examly way</p><h2>Less friction.<br /><em>More focus.</em></h2><p>Everything you need to practice with intention, all in one clear space.</p></div><div class="steps"><article><span class="step-number">01</span><h3>Pick your pace</h3><p>Choose from focused practice or timed exam mode, depending on where you are in your journey.</p></article><article><span class="step-number">02</span><h3>Find your flow</h3><p>Move through thoughtful questions with a clean interface that keeps distractions out of the way.</p></article><article><span class="step-number">03</span><h3>Know your edge</h3><p>Get instant, useful feedback so every session turns into a smarter next step.</p></article></div></section>
+  </main>
+
+  <footer class="site-footer page-shell"><a class="brand" href="#top"><span class="brand-mark">e</span><span>examly</span></a><span>© 2025 Examly Labs</span><div><a href="#about">About</a><a href="#about">Support</a><a href="#about">Privacy</a></div></footer>
+
+  <div class="modal-backdrop" id="authModal" aria-hidden="true"><section class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle"><div class="modal-top"><span class="modal-kicker">Secure workspace</span><button class="close-button" id="closeAuth" aria-label="Close sign in">×</button></div><div class="auth-content"><p class="eyebrow" id="authKicker">Welcome back</p><h2 id="authTitle">Sign in to your<br /><em>learning space.</em></h2><div class="role-switch" role="tablist"><button class="role-tab active" data-role="student" role="tab">Student</button><button class="role-tab" data-role="admin" role="tab">Admin</button></div><div class="auth-mode"><button class="auth-mode-button active" data-mode="login">Sign in</button><button class="auth-mode-button" data-mode="register">Create account</button></div><form id="authForm"><label class="name-field" hidden>Name<input type="text" id="authName" placeholder="Your name" /></label><label>Email<input type="email" id="authEmail" placeholder="you@example.com" required /></label><label>Password<input type="password" id="authPassword" placeholder="••••••••" minlength="8" required /></label><button class="button button-primary auth-submit" type="submit">Continue securely <span>↗</span></button><p class="auth-message" id="authMessage" role="status"></p></form></div></section></div>
+  <div class="dashboard-backdrop" id="dashboardModal" aria-hidden="true"><section class="dashboard-panel" role="dialog" aria-modal="true" aria-labelledby="dashboardTitle"><div class="dashboard-top"><div><p class="eyebrow">Private workspace</p><h2 id="dashboardTitle">Your progress, in focus.</h2></div><button class="close-button" id="closeDashboard" aria-label="Close dashboard">×</button></div><div id="dashboardContent"></div></section></div>
+  <div class="modal-backdrop" id="examModal" aria-hidden="true"><section class="exam-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-top"><span class="modal-kicker">Timed assessment</span><button class="close-button" id="closeModal" aria-label="Close exam">×</button></div><div class="modal-content" id="examContent"></div></section></div>
+  <script src="app.js"></script>
+</body>
+</html>
